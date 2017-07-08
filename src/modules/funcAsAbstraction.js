@@ -1,18 +1,15 @@
 let _ = require('lodash');
-
 // abstracting the notion of errors
-
-function fail(message) {
+export function fail(message) {
   throw new Error(message);
 }
-
-function note(message) {
+export function note(message) {
   console.log(`[ NOTE: ${message} ]`)
 }
-
-function warn(message) {
+export function warn(message) {
   console.log(`[ WARNING: ${message}`);
 }
+
 function parseAge(age) {
   if(!_.isString(age)) {
     // throw new Error('Expecting a string');
@@ -37,5 +34,5 @@ let result;
 // result = parseAge(42);
 // console.log(result);
 
-result = parseAge('jsldfjals');
-console.log(result);
+// result = parseAge('jsldfjals');
+// console.log(result);
