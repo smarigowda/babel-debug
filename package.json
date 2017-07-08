@@ -1,0 +1,24 @@
+{
+  "name": "babel-debug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --watch --source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015-node6": "^0.4.0",
+    "eslint": "^4.1.1",
+    "lodash": "^4.17.4",
+    "request": "^2.81.0",
+    "request-promise": "file:node_modules/request-promise"
+  },
+  "dependencies": {
+    "request-promise": "file:node_modules/request-promise"
+  }
+}
