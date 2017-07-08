@@ -10,6 +10,9 @@ function note(message) {
   console.log(`[ NOTE: ${message} ]`)
 }
 
+function warn(message) {
+  console.log(`[ WARNING: ${message}`);
+}
 function parseAge(age) {
   if(!_.isString(age)) {
     // throw new Error('Expecting a string');
@@ -20,17 +23,19 @@ function parseAge(age) {
 
   let a = parseInt(age, 10);
   if(_.isNaN(a)) {
-    console.log(`could not parse age: ${age}`);
+    // console.log(`could not parse age: ${age}`);
+    warn(`could not parse age: ${age}`);
     a = 0;
   }
   return a;
 }
 
-let result = parseAge('42');
-console.log(result);
+let result;
+// result = parseAge('42');
+// console.log(result);
 
 // result = parseAge(42);
 // console.log(result);
 
-// result = parseAge('jsldfjals');
-// console.log(result);
+result = parseAge('jsldfjals');
+console.log(result);
