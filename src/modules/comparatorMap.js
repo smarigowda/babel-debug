@@ -1,5 +1,9 @@
-function lessThan(x, y) {
+function ascending(x, y) {
   return x < y;
+}
+
+function descending(x, y) {
+  return y < x;
 }
 
 function comparator(predicate) {
@@ -14,6 +18,8 @@ function comparator(predicate) {
   }
 }
 
-let sorted = [2, 3, -1, -6, 0, -108, 42, 10].sort(comparator(lessThan));
+let sorted;
+sorted = [2, 3, -1, -6, 0, -108, 42, 10].sort(comparator(ascending));
+// sorted = [2, 3, -1, -6, 0, -108, 42, 10].sort(comparator(descending));
 
 console.log(sorted);
